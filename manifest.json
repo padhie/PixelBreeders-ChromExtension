@@ -1,0 +1,32 @@
+{
+    "name": "PixelBreeders",
+    "version": "1.0",
+    "description": "This Chrome Extension is created for the Twitch-Minigame https://pixel-breeders.com",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "webNavigation",
+        "*://*/*",
+        "tabs",
+        "https://www.twitch.tv/*",
+        "https://pixel-breeders.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.twitch.tv/*"
+            ],
+            "js": [
+                "js/pixelbreeders.js",
+                "js/content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "media/icon/icon16.png",
+        "48": "media/icon/icon48.png",
+        "128": "media/icon/icon128.png"
+    }
+}
